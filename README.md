@@ -1,7 +1,7 @@
 # Compact-Diamonds-Paper
-> Paper compatability for the [Compact Diamonds](https://github.com/Nobodyasidentity/Compact-Diamonds) datapack
+> Paper compatability for the [Compact Diamonds](https://github.com/Nobodyasidentity/Compact-Diamonds) datapack.
+<img src="https://raw.githubusercontent.com/Nobodyasidentity/Compact-Diamonds-Paper/refs/heads/main/datapackplugin/pack.png" width=256>
 
-![icon](https://raw.githubusercontent.com/Nobodyasidentity/Compact-Diamonds-Paper/refs/heads/main/datapackplugin/pack.png)
 # Compiling
 ## Dependencies
 * <a href="https://fill-ui.papermc.io/projects/paper" target="_blank">**Paper Loader**</a>
