@@ -4,14 +4,14 @@
 
 # Compiling
 ## Dependencies
-* <a href="https://fill-ui.papermc.io/projects/paper" target="_blank">**Paper Loader**</a>
+* <a href="https://fill-ui.papermc.io/projects/paper" target="_blank">**PaperMC**</a>
 * **PaperAPI**
   > <a href="https://repo.stellardrift.ca/maven/snapshots/io/papermc/paper/paper-api/" target="_blank">repo.stellardrift.ca</a>  
   > <a href="https://repo.phoenix616.dev/io/papermc/paper/paper-api/" target="_blank">repo.phoenix616.dev</a>  
 ## How to compile
 I'm assuming that you already know most of what you need to know.  
-PaperLoader is to get the libraries needed to run PaperAPI correctly.  
+PaperMC is to get the libraries needed to run PaperAPI correctly.  
 ```bat
 java -jar paper-1.21.5-114.jar --nogui
 ```
-Replace `paper-1.21.5-114.jar` with whatever PaperLoader version you have installed.
+Replace `paper-1.21.5-114.jar` with whatever PaperMC version you have installed.
