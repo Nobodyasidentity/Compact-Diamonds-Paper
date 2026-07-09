@@ -1,0 +1,31 @@
+name: Sync Paper Plugin
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "datapackplugin/**"
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source datapack repo
+        uses: actions/checkout@v4
+      - name: Checkout paper plugin repo
+        uses: actions/checkout@v4
+        with:
+          repository: Nobodyasidentity/Compact-Diamonds-Paper
+          token: ${{secrets.REPO_TOKEN}}
+          path: paper-plugin
+      - name: Sync datapackplugin folder
+        run: |
+          rm -rf paper-plugin/datapackplugin
+          cp -r datapackplugin paper-plugin/datapackplugin
+      - name: Commit and push
+        working-directory: paper-plugin
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add datapackplugin
+          git diff --staged --quiet || git commit -m "chore: sync datapackplugin folder"
+          git push
