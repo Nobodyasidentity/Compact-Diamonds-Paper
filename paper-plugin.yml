@@ -1,7 +1,0 @@
-name: Compact-Diamonds
-version: "1.0.0"
-main: datapackplugin.DatapackPlugin
-bootstrapper: datapackplugin.DatapackPluginBootstrap
-api-version: "26.1.2"
-folia-supported: false
-description: "No need to carry too many shulkers because you happen to be too rich. Just pack them together into a Compact Block of Diamond."
