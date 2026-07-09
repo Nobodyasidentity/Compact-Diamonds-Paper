@@ -1,6 +1,6 @@
 # Compact-Diamonds-Paper
 > Paper compatability for the [Compact Diamonds](https://github.com/Nobodyasidentity/Compact-Diamonds) datapack.
-<img src="https://raw.githubusercontent.com/Nobodyasidentity/Compact-Diamonds-Paper/refs/heads/main/datapackplugin/pack.png" width=256>
+<img src="https://raw.githubusercontent.com/Nobodyasidentity/Compact-Diamonds-Paper/refs/heads/main/icon.png" width=256>
 
 # Compiling
 ## Dependencies
