@@ -13,8 +13,7 @@ jobs:
       - name: Checkout Compact-Diamonds datapack repo
         uses: actions/checkout@v4
         with:
-          repository: Nobodyasidentity/Compact-Diamonds
-          token: ${{ secrets.REPO_TOKEN }}
+          path: source
 
       - name: Checkout Compact-Diamonds-Paper repo
         uses: actions/checkout@v4
@@ -26,7 +25,7 @@ jobs:
       - name: Sync datapackplugin folder
         run: |
           rm -rf paper-plugin/datapackplugin
-          cp -r datapackplugin paper-plugin/datapackplugin
+          cp -r source/datapackplugin paper-plugin/datapackplugin
 
       - name: Commit and push
         working-directory: paper-plugin
