@@ -10,28 +10,26 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Compact-Diamonds datapack repo
-        uses: actions/checkout@v4
-        with:
-          path: source
-
       - name: Checkout Compact-Diamonds-Paper repo
         uses: actions/checkout@v4
+
+      - name: Checkout Compact-Diamonds repo
+        uses: actions/checkout@v4
         with:
-          repository: Nobodyasidentity/Compact-Diamonds-Paper
+          repository: Nobodyasidentity/Compact-Diamonds
           token: ${{ secrets.REPO_TOKEN }}
-          path: paper-plugin
+          path: compact-diamonds
 
       - name: Sync datapackplugin folder
         run: |
-          rm -rf paper-plugin/datapackplugin
-          cp -r source/datapackplugin paper-plugin/datapackplugin
+          rm -rf compact-diamonds/datapackplugin
+          cp -r datapackplugin compact-diamonds/datapackplugin
 
       - name: Commit and push
-        working-directory: paper-plugin
+        working-directory: compact-diamonds
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add datapackplugin
-          git diff --staged --quiet || git commit -m "chore: sync datapackplugin folder"
+          git diff --staged --quiet || git commit -m "chore: sync datapackplugin from Paper support"
           git push
