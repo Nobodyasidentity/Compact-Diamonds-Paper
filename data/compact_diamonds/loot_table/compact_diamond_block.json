@@ -1,0 +1,53 @@
+{
+  "type": "minecraft:generic",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bat_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:item_model": "minecraft:diamond_block",
+                "minecraft:custom_model_data": {
+                  "strings": ["compact_diamond_block"]
+                },
+                "minecraft:item_name": {
+                  "translate": "block.compact_diamonds.compact_diamond_block",
+                  "fallback": "Compact Block of Diamond",
+                  "italic": false
+                },
+                "minecraft:lore": [
+                  {
+                    "translate": "info.compact_diamonds.name",
+                    "fallback": "Compact Diamonds",
+                    "color": "blue",
+                    "italic": false
+                  }
+                ],
+                "minecraft:rarity": "epic",
+                "minecraft:entity_data": {
+                  "id": "minecraft:marker",
+                  "NoGravity": true,
+                  "Invulnerable": true,
+                  "Silent": true,
+                  "Tags": ["compact_diamond_block"],
+                  "Health": 1,
+                  "NoAI": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
