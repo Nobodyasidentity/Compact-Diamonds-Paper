@@ -5,22 +5,29 @@ on:
     branches: [main]
     paths:
       - "datapackplugin/**"
+
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source datapack repo
+      - name: Checkout Compact-Diamonds datapack repo
         uses: actions/checkout@v4
-      - name: Checkout paper plugin repo
+        with:
+          repository: Nobodyasidentity/Compact-Diamonds
+          token: ${{ secrets.REPO_TOKEN }}
+
+      - name: Checkout Compact-Diamonds-Paper repo
         uses: actions/checkout@v4
         with:
           repository: Nobodyasidentity/Compact-Diamonds-Paper
-          token: ${{secrets.REPO_TOKEN}}
+          token: ${{ secrets.REPO_TOKEN }}
           path: paper-plugin
+
       - name: Sync datapackplugin folder
         run: |
           rm -rf paper-plugin/datapackplugin
           cp -r datapackplugin paper-plugin/datapackplugin
+
       - name: Commit and push
         working-directory: paper-plugin
         run: |
